@@ -1,0 +1,5 @@
+deploy:
+  script:
+    - sudo cp $CI_PROJECT_DIR/* /tmp/sql/ | sudo /bin/bash  /tmp/sql/sql_query.sh
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
